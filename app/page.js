@@ -1,11 +1,17 @@
 import Image from "next/image";
 
+
 export default function Home() {
   return (
     <main className="border border-gray-300 sm:border-none flex min-h-screen flex-col items-center justify-between p-24">
+
+       { <div className="fixed inset-0 z-0">
+  <img className="absolute inset-0 w-full h-full object-cover opacity-20" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHJycmppaXhtaHJndXowaXJhbTBhdXQzOWd3eG5paHhmd29uODBhcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9dg/gHkn7pRimgEJzZRbll/giphy.gif
+" alt="homegif" />
+</div> } 
       
       <div className="flex items-center justify-center h-screen">
-    <h1 className="text-6xl font-bold">
+    <h1 className="text-6xl font-bold fade-in">
             Samaksh Khandelwal
         </h1>
       </div>
@@ -14,8 +20,8 @@ export default function Home() {
 
 
       <div className="relative flex place-items-center z-10">
-        <h1 className={`mb-14 text-6xl font-bold`}>
-            ASPIRING MONEY MAKER  y
+        <h1 className={`mb-14 text-6xl font-bold slide-in-left`}>
+            Aspiring software dev
            </h1>
     </div>
 

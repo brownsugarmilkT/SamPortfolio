@@ -31,3 +31,37 @@ body {
     text-wrap: balance;
   }
 }
+
+@layer base {
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .fade-in {
+    animation: fadeIn 2s ease-in-out forwards;
+  }
+
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .slide-in-left {
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+  }
+  
+
+  
+}
+
