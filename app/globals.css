@@ -94,6 +94,25 @@ body {
     animation: pulse 2s infinite;
   }  
 
+  @keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  /* Glowing border animation */
+  .glow {
+    animation: glow-border 1.5s infinite alternate;
+  }
+  
+  @keyframes glow-border {
+    from {
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    }
+    to {
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    }
+  }
+
   
 }
 
