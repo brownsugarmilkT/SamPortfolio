@@ -7,7 +7,7 @@ import { useState, useEffect, useRef } from "react";
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
   const [text, setText] = useState('');
-  const fullText = "Aspiring Software Dev";
+  const fullText = "Welcome to my webpage";
 
 
   function Project({ title, imageSrc, videoSrc, description, githubLink }) {
@@ -107,7 +107,7 @@ export default function Home() {
 
         <div className="z-10">
           <h1 className={`text-6xl font-bold mb-2 ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1000 ease-in-out`}>
-            Samaksh Khandelwal
+            STILL IN DEVELOPMENT
           </h1>
           <h2 className="text-3xl font-semibold text-center">{text}</h2>
         </div>
