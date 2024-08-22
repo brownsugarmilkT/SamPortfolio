@@ -12,7 +12,7 @@ export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
   const [text, setText] = useState('');
   const [nav, setNav] = useState(false);
-  const fullText = "Welcome to my webpage";
+  const fullText = "- by Samaksh Khandelwal";
 
   // TypeWriter Function 
   useEffect(() => {
@@ -20,7 +20,9 @@ export default function Home() {
     let i = 0;
     const typingEffect = setInterval(() => {
       if (i < fullText.length) {
-        setText((prev) => prev + fullText[i]);
+        //setText((prev) => prev + fullText[i]) // caused errors by rendering unexpected spellings and 'undefined' appended after the text
+        setText(fullText.slice(0, i + 1)); // chose to not append characters like the above method and now I just set them to be substrings 
+
         i++;
       } else {
         clearInterval(typingEffect);
@@ -37,7 +39,7 @@ export default function Home() {
   const NavButton = ({ href, text }) => (
     <Link
     href = {href}
-    className="group rounded-lg px-5 py-4 transition-all ease-in-out duration-300 transform hover:scale-110 border border-transparent shadow-md hover:border-purple-500 hover:shadow-lg hover:shadow-red-950"
+    className="group rounded-lg px-5 py-4 sm:px-5 sm:py-4 transition-all ease-in-out duration-300 transform hover:scale-110 border border-transparent shadow-md hover:border-purple-500 hover:shadow-lg hover:shadow-red-950"
   >
     
  
@@ -84,11 +86,11 @@ const ConnectButton = ({ href, src, alt }) => (
 
         <div className="z-10">
           <h1 className={`text-6xl font-bold mb-2 ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1000 ease-in-out`}>
-            STILL IN DEVELOPMENT
+            Welcome to My Webpage
           </h1>
           <h2 className="text-3xl font-semibold text-center">{text}</h2>
 
-        <div className={'flex justify-center space-x-4 mt-8  '}>
+        <div className={'flex flex-wrap justify-center gap-4 mt-8  '}>
             <NavButton href="#about" text="About Me" />
             <NavButton href="/projects" text="Projects" />
 
@@ -147,7 +149,7 @@ const ConnectButton = ({ href, src, alt }) => (
           <p className="text-lg mb-8">
             Feel free to reach out through any of the channels below.
           </p>
-          <div className="flex justify-center space-x-4">
+          <div className="flex flex-wrap justify-center gap-4 mt-8">
             <ConnectButton
               href="https://github.com/brownsugarmilkT"
               src="/779088.png"
