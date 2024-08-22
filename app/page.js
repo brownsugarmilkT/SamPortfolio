@@ -149,7 +149,7 @@ const ConnectButton = ({ href, src, alt }) => (
           <p className="text-lg mb-8">
             Feel free to reach out through any of the channels below.
           </p>
-          <div className="flex flex-wrap justify-center gap-4 mt-8">
+          <div className="flex flex-wrap justify-center gap-4">
             <ConnectButton
               href="https://github.com/brownsugarmilkT"
               src="/779088.png"
