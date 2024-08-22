@@ -95,13 +95,13 @@ export default function Projects() {
     <main className="min-h-screen relative">
         <div className="fixed inset-0 z-0">
           <img
-            className="absolute inset-0 w-full h-full object-cover opacity-30 transition-opacity duration-1000 ease-in-out hover:opacity-30"
+            className="absolute inset-0 w-full h-full object-cover opacity-20 transition-opacity duration-1000 ease-in-out hover:opacity-60"
             src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGY4ZjRvMWVjZmNoeGVtYXVldHRiNzZxb2I1YnJva2l4OXJuaWg0MiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/lkceXNDw4Agryfrwz8/giphy.gif"
           />
         </div>
 
         
-        <div className="relative z-10 min-h-screen p-24 pt-40  ">
+        <div className="relative z-10 min-h-screen bg-opacity-90 p-24 pt-40  ">
         <h1 className={`text-6xl font-bold mb-8 text-center transition-opacity duration-1000 ${titleVisible ? 'opacity-100' : 'opacity-0'} pulse `}>
           MY PROJECTS
         </h1>

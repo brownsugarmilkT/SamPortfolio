@@ -4,6 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 
+
+
+
+
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
   const [text, setText] = useState('');
@@ -72,7 +76,8 @@ const ConnectButton = ({ href, src, alt }) => (
       <section className="h-screen flex flex-col items-center justify-center relative overflow-hidden">
         <div className="fixed inset-0 z-0">
           <img
-            className="absolute inset-0 w-full h-full object-cover opacity-20 transition-opacity duration-1000 ease-in-out hover:opacity-30"
+            className="absolute inset-0 w-full h-full object-cover opacity-20 transition-opacity duration-1000 ease-in-out hover:opacity-60"
+            // { implemented ease in out to bg when hover}  
             src="https://media.giphy.com/media/eJoZAwRN9OI5QjthIE/giphy.gif?cid=790b7611dsexi57wg9888md71hguds1tvikyd54k1fej6jyo&ep=v1_gifs_search&rid=giphy.gif&ct=g"
           />
         </div>
@@ -93,9 +98,9 @@ const ConnectButton = ({ href, src, alt }) => (
 
         </section>
 
-      <section id="about" className="min-h-screen bg- flex items-center justify-center p-24">
-        <div className="max-w-3xl">
-          <h2 className="text-4xl font-bold mb-8">Some quick introductions!!!</h2>
+      <section id="about" className=" min-h-screen bg- flex items-center justify-center p-24">
+        <div className=" z-10 max-w-3xl">
+          <h2 className="text-4xl font-bold mb-2">Some quick introductions!!!</h2>
           <p className="text-lg">
             Thanks for visiting my profile. I am a rising junior at McGill University majoring in Computer Science and also minoring in economics and statistics. In my free time I like to play tennis, indulge in some video games, read some peak fiction and spend a lot of time with my friends. When I am not studying, You can find me frolicking somewhere on the McGill campus but I mostly spend my time at the library :)
           </p>
@@ -137,7 +142,7 @@ const ConnectButton = ({ href, src, alt }) => (
 
 
 <section id="connect" className="min-h-screen bg- flex items-center justify-center p-24">
-        <div className="max-w-3xl text-center">
+        <div className="z-10 max-w-3xl text-center">
           <h2 className="text-4xl font-bold mb-8">Connect</h2>
           <p className="text-lg mb-8">
             Feel free to reach out through any of the channels below.
